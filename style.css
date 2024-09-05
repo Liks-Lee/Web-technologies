@@ -1,20 +1,25 @@
 h1 {
     color: black;
-
 }
 
 .table {
-    border: 1px solid aquamarine;
-}
-
-.table td {
-    border: 1px solid rgb(186, 22, 22);
+    border: 2px solid rgb(247, 88, 88);
 }
 
 .head1 {
-    color: aqua;
+    color: rgb(228, 91, 212);
+    font-size: 60px;
 }
 
 .contacts{
-    background-color: chocolate;
+    background-color: rgb(235, 193, 115);
+    padding: 20px 15px;
+}
+
+.quote__author {
+    margin-top: 10px;
+    border-top: 1px solid #ed6742; /* декоративная граница */
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 300;
 }
