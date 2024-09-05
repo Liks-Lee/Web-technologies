@@ -1,0 +1,16 @@
+h1 {
+    color: black;
+
+}
+
+.table {
+    border: 1px solid aquamarine;
+}
+
+.table td {
+    border: 1px solid black;
+}
+
+.head1 {
+    color: aqua;
+}
