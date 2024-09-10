@@ -19,7 +19,7 @@
     font-weight: 300;
 }
 
-.p {
+p {
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -27,7 +27,6 @@
     margin-right: 0;
 }
 
-.hrev {
-    color: black
-
+body {
+    font-family: 'Roboto', sans-serif;
 }
