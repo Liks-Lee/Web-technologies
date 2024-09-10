@@ -19,6 +19,11 @@
     font-weight: 300;
 }
 
+.link:hover {
+    color: rgb(154, 66, 158);
+    text-decoration: underline;
+}
+
 p {
     display: block;
     margin-top: 1em;
