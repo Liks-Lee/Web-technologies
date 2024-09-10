@@ -11,7 +11,12 @@
     alink="red"
 }
 
-.contacts:hover {
+.link{
+    color: rgb(214, 247, 31);
+    text-decoration: none;
+}
+
+.link:hover {
     color: rgb(154, 66, 158);
     text-decoration: underline;
 }
