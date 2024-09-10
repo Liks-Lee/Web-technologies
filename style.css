@@ -7,6 +7,8 @@
     background-color: rgb(235, 193, 115);
     padding: 20px 15px;
     color: rgb(93, 14, 14)
+    link="white" 
+    alink="red"
 }
 
 .quote__author {
