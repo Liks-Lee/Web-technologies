@@ -11,17 +11,17 @@
     alink="red"
 }
 
+.contacts:hover {
+    color: rgb(154, 66, 158);
+    text-decoration: underline;
+}
+
 .quote__author {
     margin-top: 10px;
     border-top: 1px solid #ed6742; /* декоративная граница */
     font-style: italic;
     font-size: 14px;
     font-weight: 300;
-}
-
-.link:hover {
-    color: rgb(154, 66, 158);
-    text-decoration: underline;
 }
 
 p {
