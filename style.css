@@ -1,25 +1,25 @@
 *{
-    box-sizing: border-box
+    box-sizing: border-box /*свойства width и height начинают включать в себя значения padding и border*/
 }
 
 .head1 {
     text-align: center;
     background-color: rgb(235, 193, 115);
     color: rgb(228, 91, 212);
-    font-size: 60px;
+    font-size: 60px; /*Размер шрифта*/
 }
 
 .contacts{
-    text-align: center;
+    text-align: center; /*Отцентровка*/
     background-color: rgb(235, 193, 115);
-    padding: 20px 15px
+    padding: 20px 15px /* Увеличенные внутренние отступы */ 
     link="white" 
     alink="red"
 }
 
 .container { 
     max-width: 1000px; /* Уменьшение максимальной ширины */ 
-    margin: 0 auto; /* Автоматические поля слева и справа */ 
+    margin: 0 auto; /* Автоматические поля*/ 
     padding: 20px; /* Увеличенные внутренние отступы */ 
     background-color: #fff; /* Фон для содержания */ 
 }
@@ -41,11 +41,11 @@
     border-top: 1px solid #ed6742; /* декоративная граница */
     font-style: italic;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 300; /*толщина шрифта*/
 }
 
 p {
-    display: block;
+    display: block; /*занимает всю доступную горизонтальную ширину и располагается на новой строке*/
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 0;
