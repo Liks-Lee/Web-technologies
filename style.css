@@ -12,7 +12,10 @@
 .contacts{
     text-align: center; /*Отцентровка*/
     background-color: rgb(235, 193, 115);
-    padding: 10px 15px /* Увеличенные внутренние отступы */ 
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px /* Увеличенные внутренние отступы */ 
     link="white" 
     alink="red"
 }
