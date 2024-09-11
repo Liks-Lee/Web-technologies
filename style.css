@@ -11,6 +11,13 @@
     alink="red"
 }
 
+.container { 
+    max-width: 1000px; /* Уменьшение максимальной ширины */ 
+    margin: 0 auto; /* Автоматические поля слева и справа */ 
+    padding: 40px; /* Увеличенные внутренние отступы */ 
+    background-color: #fff; /* Фон для содержания */ 
+}
+
 .link{
     color: rgb(214, 247, 31);
     text-decoration: none;
