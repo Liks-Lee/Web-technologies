@@ -2,6 +2,10 @@
     box-sizing: border-box /*свойства width и height начинают включать в себя значения padding и border*/
 }
 
+img{
+    text-align: center; 
+}
+
 .head1 {
     text-align: center;
     background-color: rgb(235, 193, 115);
