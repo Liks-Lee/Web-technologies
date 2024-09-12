@@ -2,7 +2,7 @@
     box-sizing: border-box /*свойства width и height начинают включать в себя значения padding и border*/
 }
 
-img{
+.image{
     text-align: center; 
 }
 
