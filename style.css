@@ -126,3 +126,14 @@ body {
 .ml_gr{
     color: #333;
 }
+
+.add-button {
+    background-color: #f1eee9;
+    color: #333;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
