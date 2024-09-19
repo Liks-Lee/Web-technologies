@@ -79,6 +79,7 @@ body {
 
 .dish-item {
     background-color: white;
+    text-align: center;
     padding: 30px 40px;
     border-radius: 35px;
     cursor: pointer;
