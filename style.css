@@ -137,3 +137,11 @@ body {
     cursor: pointer;
     margin-top: 20px;
 }
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
