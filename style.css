@@ -95,7 +95,7 @@ body {
 .dish-content img {
     width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 35px;
     margin-bottom: 20px;
 }
 
@@ -117,4 +117,8 @@ body {
 .dish-item:hover .dish-button {
     background-color: tomato;
     color: white;
+}
+
+.price {
+    font-size: 14px;
 }
