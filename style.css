@@ -73,8 +73,8 @@ body {
 
 .dishes-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex: 1;
+    text-align: left;
 }
 
 .dish-item {
