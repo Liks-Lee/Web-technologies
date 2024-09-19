@@ -140,8 +140,12 @@ body {
 
 nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*перенос строк*/
     gap: 15px;
     justify-content: center;
     margin-bottom: 30px;
+}
+
+nav a.active {
+    color: tomato;
 }
