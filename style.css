@@ -120,5 +120,9 @@ body {
 }
 
 .price {
-    font-size: 14px;
+    font-size: 20px;
+}
+
+.ml_gr{
+    color: #333;
 }
