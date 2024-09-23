@@ -149,3 +149,19 @@ nav {
 nav a.active {
     color: tomato;
 }
+
+@media (max-width: 800px) {
+    .dish_block {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .dish_block {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
