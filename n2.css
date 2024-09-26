@@ -43,14 +43,6 @@
     text-decoration: underline;
 }
 
-.quote__author {
-    margin-top: 10px;
-    border-top: 1px solid #ed6742; /* декоративная граница */
-    font-style: italic;
-    font-size: 14px;
-    font-weight: 300; /*толщина шрифта*/
-}
-
 p {
     display: block; /*занимает всю доступную горизонтальную ширину и располагается на новой строке*/
     margin-top: 1em;
