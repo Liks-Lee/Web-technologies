@@ -68,7 +68,6 @@ body {
 .dishes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
 }
 
 .dishes-container {
@@ -90,7 +89,6 @@ body {
 
 .dish-content {
     display: flex;
-    gap: 10px;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -146,7 +144,8 @@ nav {
     display: flex;
     flex-wrap: wrap; /*перенос строк*/
     gap: 15px; /*устанавливает отступ 15px между элементами меню*/
-    justify-content: center; /*центрирует элементы меню по горизонтали*/
+    justify-content: left; /*центрирует элементы меню по горизонтали*/
+    padding-left: 15px;
     margin-bottom: 30px;
 }
 
@@ -162,11 +161,19 @@ nav {
     .dish_block {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    nav{
+        justify-content: center; /*центрирует элементы меню по горизонтали*/
+    }
 }
 
 @media (max-width: 600px) {
     .dish_block {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    nav{
+        justify-content: center; /*центрирует элементы меню по горизонтали*/
     }
 
     h2 {
