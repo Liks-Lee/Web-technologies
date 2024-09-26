@@ -76,17 +76,18 @@ nav {
 .dishes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    gap: 10px;
 }
 
 .dishes-container {
     display: flex;
+    gap: 10px;
     text-align: left;
 }
 
 .dish-item {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     background-color: white;
     text-align: center;
     padding: 30px 40px;
@@ -97,6 +98,7 @@ nav {
 
 .dish-content {
     display: flex;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
     text-align: center;
