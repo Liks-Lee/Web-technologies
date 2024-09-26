@@ -146,7 +146,7 @@ nav {
     margin-bottom: 30px;
 }
 
-nav a.active {
+#active {
     color: tomato;
 }
 
