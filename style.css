@@ -134,21 +134,25 @@ body {
     padding: 10px 30px;
     border-radius: 10px;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer; /*меняет вид курсора на указатель при наведении на кнопку "Добавить"*/
     margin-top: 20px;
 }
 
 nav {
     display: flex;
     flex-wrap: wrap; /*перенос строк*/
-    gap: 15px;
-    justify-content: center;
+    gap: 15px; /*устанавливает отступ 15px между элементами меню*/
+    justify-content: center; /*центрирует элементы меню по горизонтали*/
     margin-bottom: 30px;
 }
 
 nav a.active {
     color: tomato;
 }
+
+/*эти блоки определяют стили, которые будут применяться при ширине экрана меньше 800px и 600px
+в них меняется количество колонок в сетке с блюдами с 3 на 2 при ширине экрана меньше 800px
+при ширине экрана меньше 600px заголовки <h2> центрируются*/
 
 @media (max-width: 800px) {
     .dish_block {
