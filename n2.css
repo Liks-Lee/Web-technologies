@@ -60,7 +60,7 @@ body {
 .dishes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    gap: 10px;
 }
 
 .dishes-container {
@@ -70,6 +70,7 @@ body {
 
 .dish-item {
     display: flex;
+    gap: 10px;
     background-color: white;
     text-align: center;
     padding: 30px 40px;
@@ -150,12 +151,14 @@ nav {
 @media (max-width: 800px) {
     .dish_block {
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
     }
 }
 
 @media (max-width: 600px) {
     .dish_block {
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
     }
 
     h2 {
