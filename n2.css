@@ -43,6 +43,14 @@
     text-decoration: underline;
 }
 
+.quote__author {
+    margin-top: 10px;
+    border-top: 1px solid #ed6742; /* декоративная граница */
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 300; /*толщина шрифта*/
+}
+
 p {
     display: block; /*занимает всю доступную горизонтальную ширину и располагается на новой строке*/
     margin-top: 1em;
@@ -60,7 +68,7 @@ body {
 .dishes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-gap: 10px;
 }
 
 .dishes-container {
@@ -70,7 +78,7 @@ body {
 
 .dish-item {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     background-color: white;
     text-align: center;
     padding: 30px 40px;
@@ -151,14 +159,12 @@ nav {
 @media (max-width: 800px) {
     .dish_block {
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
     }
 }
 
 @media (max-width: 600px) {
     .dish_block {
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
     }
 
     h2 {
