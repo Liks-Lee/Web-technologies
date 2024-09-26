@@ -70,7 +70,6 @@ body {
 
 .dish-item {
     display: flex;
-    gap: 15px;
     background-color: white;
     text-align: center;
     padding: 30px 40px;
