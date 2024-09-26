@@ -67,34 +67,25 @@ body {
 
 .dishes-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.dishes-container {
-    display: flex;
-    text-align: left;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
 }
 
 .dish-item {
     display: flex;
-    gap: 10px;
-    background-color: white;
     text-align: center;
-    padding: 30px 40px;
-    border-radius: 35px;
-    cursor: pointer;
-    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
-}
-
-.dish-content {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 10px;
+    max-width: 800px;
+    padding: 30px 40px 30px 40px;
+    background-color: white;
+    border-radius: 35px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
 }
 
-.dish-content img {
+
+.dish-item img {
     width: 100%;
     height: auto;
     border-radius: 35px;
@@ -158,8 +149,8 @@ nav {
 при ширине экрана меньше 600px заголовки <h2> центрируются*/
 
 @media (max-width: 800px) {
-    .dish_block {
-        grid-template-columns: 1fr 1fr 1fr;
+    .dishes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     nav{
@@ -168,8 +159,8 @@ nav {
 }
 
 @media (max-width: 600px) {
-    .dish_block {
-        grid-template-columns: 1fr 1fr 1fr;
+    .dishes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     nav{
