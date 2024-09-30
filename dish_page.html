@@ -157,6 +157,81 @@
                     </footer>
                 </article>
             </main>
+            
+                <form id="orderForm" action="https://httpbin.org/post" method="post" class="form-container">
+                    <section class="form-section">
+                        <h2>Ваш заказ</h2>
+            
+                        <label for="soup">Суп</label>
+                        <select id="soup" name="soup" required>
+                            <option value="" disabled selected>-- Выберите суп --</option>
+                            <option value="tomyam">Том Ям с креветками</option>
+                            <option value="tomyam1">Том Ям классический</option>
+                            <option value="tomyam2">Том Ям острый</option>
+                        </select>
+            
+                        <label for="mainCourse">Главное блюдо</label>
+                        <select id="mainCourse" name="mainCourse" required>
+                            <option value="" disabled selected>-- Выберите главное блюдо --</option>
+                            <option value="korndog">Корн-дог</option>
+                            <option value="udon">Удон</option>
+                            <option value="vokwithchick">Вок с курицей</option>
+                        </select>
+            
+                        <label for="drink">Напиток</label>
+                        <select id="drink" name="drink" required>
+                            <option value="" disabled selected>-- Выберите напиток --</option>
+                            <option value="bubble-tea-with-topioka">Бабл-ти с топиокой</option>
+                            <option value="bubble-tea-with-juiceball">Бабл-ти с джус боллами</option>
+                            <option value="limonade">Лимонад</option>
+                        </select>
+            
+                        <label for="comments">Комментарии к заказу:<br></label>
+                        <textarea id="comments" name="comments" rows="4" placeholder="Введите комментарии..."></textarea>
+                    </section>
+            
+                    <!-- Client's Information Block -->
+                    <section class="form-section">
+                        <h2>Ваши данные</h2>
+            
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required>
+            
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+            
+                        <label>
+                            <input type="checkbox" id="subscribe" name="subscribe">
+                            Получать информацию о скидках и акциях
+                        </label>
+            
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" name="phone" required>
+            
+                        <label for="address">Адрес доставки</label>
+                        <input type="text" id="address" name="address" required>
+                        <p class="delivery-note">Доставка осуществляется только по Москве</p>
+            
+                        <label>Время доставки:</label>
+                        <label>
+                            <input type="radio" name="deliveryTimeOption" value="asSoonAsPossible" checked>
+                            Как можно скорее
+                        </label>
+                        <label>
+                            <input type="radio" name="deliveryTimeOption" value="specificTime">
+                            К указанному времени
+                        </label>
+            
+                        <label for="deliveryTime">Укажите время доставки</label>
+                        <input type="time" id="deliveryTime" name="deliveryTime" min="07:00" max="23:00", step="300" required>
+                        <p class="delivery-note">Доступное время доставки с 7:00 до 23:00</p>
+
+                        <div>
+                            <button class="add-button" type="reset">Сбросить</button>
+                            <button class="add-button" type="submit">Отправить</button>
+                        </div>
+                    </section>
+                
         </div>
     </body>
 </html>
