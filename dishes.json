@@ -1,0 +1,76 @@
+{
+    "dishes": [
+    {
+        "keyword": "tom_yam_s_krevetkami",
+        "name": "Том Ям с креветками",
+        "price": 365,
+        "category": "Супы",
+        "volume": "300 г",
+        "image": "https://i.pinimg.com/564x/2e/f8/b9/2ef8b92d4ddaa1a9eac435e3f2855fdb.jpg"
+    },
+    {
+        "keyword": "tom_yam_hot",
+        "name": "Том Ям острый",
+        "price": 301,
+        "category": "Супы",
+        "volume": "350 г",
+        "image": "https://i.pinimg.com/564x/2c/6c/93/2c6c939e9276aa070e366f2b25614a98.jpg"
+    },
+    {
+        "keyword": "tom_yam_classik",
+        "name": "Том Ям классический",
+        "price": 251,
+        "category": "Супы",
+        "volume": "250 г",
+        "image": "https://i.pinimg.com/564x/28/27/97/2827977d9dc5a535112b524f6c09ba98.jpg"
+    },
+    {
+        "keyword": "Corn-dog",
+        "name": "Корн-дог",
+        "price": 250,
+        "category": "Главные блюда",
+        "volume": "300 г",
+        "image": "https://i.pinimg.com/564x/89/98/47/899847b7982fe0effe41b91afc3df94b.jpg"
+    },
+    {
+        "keyword": "Udon",
+        "name": "Удон",
+        "price": 251,
+        "category": "Главные блюда",
+        "volume": "250 г",
+        "image": "https://i.pinimg.com/564x/75/44/44/754444093eb61c3509c6c380214bdbcb.jpg"
+    },
+    {
+        "keyword": "Wok_with_chicken",
+        "name": "Вок с курицей",
+        "price": 301,
+        "category": "Главные блюда",
+        "volume": "350 г",
+        "image": "https://i.pinimg.com/564x/32/96/24/32962432bd4db797be3ece93512d3410.jpg"
+    },
+    {
+        "keyword": "bubble_tea_with_topioka",
+        "name": "Бабл-ти с топиокой",
+        "price": 200,
+        "category": "Напитки",
+        "volume": "300 мл",
+        "image": "https://i.pinimg.com/564x/7e/7b/bf/7e7bbfb70cbf1c488ba1707b2e7d90e5.jpg"
+    },
+    {
+        "keyword": "bubble_tea_with_juiceball",
+        "name": "Бабл-ти с джусболлами",
+        "price": 250,
+        "category": "Напитки",
+        "volume": "250 мл",
+        "image": "https://i.pinimg.com/564x/a4/31/21/a431213d5671a83ef47dc08af269a3e4.jpg"
+    },
+    {
+        "keyword": "limonade",
+        "name": "Лимонад",
+        "price": 300,
+        "category": "Напитки",
+        "volume": "350 мл",
+        "image": "https://i.pinimg.com/564x/69/fe/93/69fe930753105875657ef610fec9759f.jpg"
+    }
+    ]
+}
