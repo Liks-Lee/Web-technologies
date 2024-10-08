@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+        <script src="scripts_js/dishes.js"></script>
     </head>
 
     <body>
@@ -44,7 +45,7 @@
                     <p>Окунитесь с головой в восточную культуру у себя дома</p>
                 </section>
 
-                <section>
+                <section id = "soup">
                     <h2>Супы:</h2>
                     <div class="dishes-grid">
                         <div class="dish-item">
@@ -79,7 +80,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section id = "main_dish">
                     <h2>Главные блюда:</h2>
                     <div class="dishes-grid">
                         <div class="dish-item">
@@ -112,7 +113,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section id = "drink">
                     <h2>Напитки:</h2>
                     <div class="dishes-grid">
                         <div class="dish-item">
@@ -151,29 +152,18 @@
                     <section class="form-section">
                         <h2>Ваш заказ</h2>
             
-                        <label for="soup">Суп</label>
-                        <select id="soup" name="soup" required>
-                            <option value="" disabled selected>-- Выберите суп --</option>
-                            <option value="tomyam_crevetki">Том Ям с креветками</option>
-                            <option value="tomyam_classik">Том Ям классический</option>
-                            <option value="tomyam_hot">Том Ям острый</option>
-                        </select>
-            
-                        <label for="mainCourse">Главное блюдо</label>
-                        <select id="mainCourse" name="mainCourse" required>
-                            <option value="" disabled selected>-- Выберите главное блюдо --</option>
-                            <option value="korndog">Корн-дог</option>
-                            <option value="udon">Удон</option>
-                            <option value="vokwithchick">Вок с курицей</option>
-                        </select>
-            
-                        <label for="drink">Напиток</label>
-                        <select id="drink" name="drink" required>
-                            <option value="" disabled selected>-- Выберите напиток --</option>
-                            <option value="bubble-tea-with-topioka">Бабл-ти с топиокой</option>
-                            <option value="bubble-tea-with-juiceball">Бабл-ти с джус боллами</option>
-                            <option value="limonade">Лимонад</option>
-                        </select>
+                        <p>Ничего не выбрано</p>
+
+                        <p id="soup_label"><b>Суп</b></p>
+                        <p id="chosen_soup">Блюдо не выбрано</p>
+
+                        <p id="main_label"><b>Главное блюдо</b></p>
+                        <p id="chosen_main">Блюдо не выбрано</p>
+
+                        <p id="drink_label"><b>Напиток</b></p>
+                        <p id="chosen_drink">Блюдо не выбрано</p>
+
+                        <p id="total_price">Стоимость заказа: 0₽</p>
             
                         <label for="comments">Комментарии к заказу:<br></label>
                         <textarea id="comments" name="comments" rows="4" placeholder="Введите комментарии..."></textarea>
