@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const soupLabel = document.getElementById('soup_label');
             const mainLabel = document.getElementById('main_label');
             const drinkLabel = document.getElementById('drink_label');
-            const EmptyMessage = document.querySelector('empty_message');
+            const EmptyMessage = document.querySelector('.empty_message');
 
             // Изначально элементы скрыты
             soupLabel.style.display = 'none';
@@ -90,6 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
             drinkLabel.style.display = 'none';
             chosenDrink.style.display = 'none';
             totalPriceElement.style.display = 'none';
+
+            const foodPriceElements = document.getElementById('order_summary');
+            const priceCount = document.getElementById('price_count');
 
             function addToOrder(dish) {
                 let isUpdated = false;
@@ -106,12 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 if (isUpdated) {
-                    nothingSelectedMessage.style.display = 'none';
+                    emptyMessage.style.display = 'none';
                 }
 
                 FoodPriceElements.textContent = 'Стоимость заказа';
                 FoodPriceElements.style.display = 'block';
-                PriceCount.textContent = `${FoodPrice}₽`;
+                PriceCount.textContent = `${totalPrice}₽`;
                 PriceCount.style.display = 'block';
 
                 showEmptyCategories();
