@@ -18,28 +18,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
             function createCard(dish) {
                 const card = document.createElement('div');
-                card.classList.add('dish');
+                card.classList.add('dish-item');
 
                 const img = document.createElement('img');
-                img.src = dish-item['image'];
-                img.alt = dish-item['name'];
+                img.src = dish.image;
+                img.alt = dish.name;
 
                 const price = document.createElement('p');
                 price.classList.add('price');
-                price.textContent = dish-item['price'] + '₽';
+                price.textContent = `${dish.price}₽`;
 
                 const dishName = document.createElement('p');
                 dishName.classList.add('dish_name');
-                dishName.textContent = dish-item['name'];
+                dishName.textContent = dish.name;
 
                 const ml_gr = document.createElement('p');
-                ml_gr.classList.add('volume');
-                ml_gr.textContent = dish-item['volume'];
+                ml_gr.classList.add('ml_gr');
+                ml_gr.textContent = dish.volume;
 
                 const buttonDiv = document.createElement('div');
-                const button = document.createElement('buttonDiv');
+                const button = document.createElement('button');
                 button.textContent = 'Добавить';
-                buttonDiv.appendChild(buttonDiv);
+                button.className = 'add-button';
+                buttonDiv.appendChild(button);
 
                 card.appendChild(img);
                 card.appendChild(price);
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Функционал кнопки
                 button.addEventListener('click', () => {
-                    addToOrder(dish-item);
+                    addToOrder(dish);
                 });
 
                 return card;
@@ -116,8 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     emptyMessage.style.display = 'none';
                 }
 
-                FoodpriceElements.textContent = 'Стоимость заказа';
-                FoodpriceElements.style.display = 'block';
+                foodpriceElements.textContent = 'Стоимость заказа';
+                foodpriceElements.style.display = 'block';
                 priceCount.textContent = `${totalprice}₽`;
                 priceCount.style.display = 'block';
 
@@ -127,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function updateCategory(category, dish, chosenElement, labelElement) {
                 // Если блюдо из этой категории уже выбрано, вычитаем его цену
                 if (selectedDishes[category] !== null) {
-                    totalprice -= selectedDishes[category]['price'];
+                    totalprice -= selectedDishes[category].price;
                 }
 
                 // Обновляем выбранное блюдо
