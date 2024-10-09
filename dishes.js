@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // Заполнение карточек блюд
-            const SectionSoup = document.querySelectorAll('#soup .dish-grid')[0];
-            const SectionMainDish = document.querySelectorAll('#main_dish .dish-grid')[0];
-            const SectionDrink = document.querySelectorAll('#drink .dish-grid')[0];
+            const SectionSoup = document.querySelectorAll('#soup .dish')[0];
+            const SectionMainDish = document.querySelectorAll('#main_dish .dish')[0];
+            const SectionDrink = document.querySelectorAll('#drink .dish')[0];
 
             function createCard(dish) {
                 const card = document.createElement('div');
-                card.classList.add('dish-item');
+                card.classList.add('dish');
 
                 const img = document.createElement('img');
                 img.src = dish-item['image'];
@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 dishName.textContent = dish-item['name'];
 
                 const ml_gr = document.createElement('p');
-                ml_gr.classList.add('ml_gr');
-                ml_gr.textContent = dish-item['ml_gr'];
+                ml_gr.classList.add('volume');
+                ml_gr.textContent = dish-item['volume'];
 
                 const buttonDiv = document.createElement('div');
-                const button = document.createElement('add-button');
+                const button = document.createElement('buttonDiv');
                 button.textContent = 'Добавить';
-                buttonDiv.appendChild(add-button);
+                buttonDiv.appendChild(buttonDiv);
 
                 card.appendChild(img);
                 card.appendChild(price);
