@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('dishes.json')
+    fetch('dishes_list.json')
         .then(response => response.json())
         .then(data => {
             // Сортировка блюд
-            const sortedDishes = data['dishes'].sort((a, b) => {
+            const sortedDishes = data['dishes_list'].sort((a, b) => {
                 return a['name'].localeCompare(b['name'], 'ru');
             });
 
