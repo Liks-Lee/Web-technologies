@@ -57,9 +57,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             function populateCards(sectionElement, category) {
+            //     sortedDishes.forEach(dish => {
+            //         if (dish['category'] === category) {
+            //             const card = createCard(dish);
+            //             sectionElement.appendChild(card);
+            //         }
+            //     });
+            // }
+                if (!sectionElement) {
+                    console.error(`Section element not found for category: ${category}`);
+                    return;
+                }
+                
                 sortedDishes.forEach(dish => {
-                    if (dish['category'] === category) {
+                    if (dish.category === category) {
                         const card = createCard(dish);
+                        if (!card) {
+                            console.error(`Failed to create card for dish: ${JSON.stringify(dish)}`);
+                            return;
+                        }
                         sectionElement.appendChild(card);
                     }
                 });
@@ -79,21 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Напитки': null
             };
 
-            const chosenSoup = document.getElementById('chosen_soup');
-            const chosenMain = document.getElementById('chosen_main');
-            const chosenDrink = document.getElementById('chosen_drink');
-            const soupLabel = document.getElementById('soup_label');
-            const mainLabel = document.getElementById('main_label');
-            const drinkLabel = document.getElementById('drink_label');
+            const chosen_soup = document.getElementById('chosen_soup');
+            const chosen_main = document.getElementById('chosen_main');
+            const chosen_drink = document.getElementById('chosen_drink');
+            const soup_label = document.getElementById('soup_label');
+            const main_label = document.getElementById('main_label');
+            const drink_label = document.getElementById('drink_label');
             const EmptyMessage = document.querySelector('.empty_message');
 
             // Изначально элементы скрыты
-            soupLabel.style.display = 'none';
-            chosenSoup.style.display = 'none';
-            mainLabel.style.display = 'none';
-            chosenMain.style.display = 'none';
-            drinkLabel.style.display = 'none';
-            chosenDrink.style.display = 'none';
+            soup_label.style.display = 'none';
+            chosen_soup.style.display = 'none';
+            main_label.style.display = 'none';
+            chosen_main.style.display = 'none';
+            drink_label.style.display = 'none';
+            chosen_drink.style.display = 'none';
             totalpriceElement.style.display = 'none';
 
             const foodpriceElements = document.getElementById('order_summary');
@@ -103,13 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 let isUpdated = false;
 
                 if (dish['category'] === 'Супы') {
-                    updateCategory('Супы', dish, chosenSoup, soupLabel);
+                    updateCategory('Супы', dish, chosen_soup, soup_label);
                     isUpdated = true;
                 } else if (dish['category'] === 'Главные блюда') {
-                    updateCategory('Главные блюда', dish, chosenMain, mainLabel);
+                    updateCategory('Главные блюда', dish, chosen_main, main_label);
                     isUpdated = true;
                 } else if (dish['category'] === 'Напитки') {
-                    updateCategory('Напитки', dish, chosenDrink, drinkLabel);
+                    updateCategory('Напитки', dish, chosen_drink, drink_label);
                     isUpdated = true;
                 }
 
@@ -144,19 +160,19 @@ document.addEventListener('DOMContentLoaded', () => {
             // Показываем пустые категории
             function showEmptyCategories() {
                 if (selectedDishes['Супы'] === null) {
-                    chosenSoup.textContent = 'Блюдо не выбрано';
-                    soupLabel.style.display = 'block';
-                    chosenSoup.style.display = 'block';
+                    chosen_soup.textContent = 'Блюдо не выбрано';
+                    soup_label.style.display = 'block';
+                    chosen_soup.style.display = 'block';
                 }
                 if (selectedDishes['Главные блюда'] === null) {
-                    chosenMain.textContent = 'Блюдо не выбрано';
-                    mainLabel.style.display = 'block';
-                    chosenMain.style.display = 'block';
+                    chosen_main.textContent = 'Блюдо не выбрано';
+                    main_label.style.display = 'block';
+                    chosen_main.style.display = 'block';
                 }
                 if (selectedDishes['Напитки'] === null) {
-                    chosenDrink.textContent = 'Блюдо не выбрано';
-                    drinkLabel.style.display = 'block';
-                    chosenDrink.style.display = 'block';
+                    chosen_drink.textContent = 'Блюдо не выбрано';
+                    drink_label.style.display = 'block';
+                    chosen_drink.style.display = 'block';
                 }
             }
         });
