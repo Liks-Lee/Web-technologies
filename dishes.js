@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 price.textContent = `${dish.price}₽`;
 
                 const dishName = document.createElement('p');
-                dishName.classList.add('dish_name');
+                dishName.classList.add('price');
                 dishName.textContent = dish.name;
 
                 const volume = document.createElement('p');
