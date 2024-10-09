@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let loc = window.location.pathname;
+    let dir = loc.substring(0, loc.lastIndexOf('/'));
+    console.log(dir)
     fetch('dishes_list.json')
         .then(response => response.json())
         .then(data => {
             // Сортировка блюд
-            const sortedDishes = data['dishes_list'].sort((a, b) => {
+
+            const sortedDishes = data['dishes'].sort((a, b) => {
                 return a['name'].localeCompare(b['name'], 'ru');
             });
 
@@ -14,38 +18,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
             function createCard(dish) {
                 const card = document.createElement('div');
-                card.classList.add('dish');
+                card.classList.add('dish-item');
 
                 const img = document.createElement('img');
-                img.src = dish['image'];
-                img.alt = dish['name'];
+                img.src = dish-item['image'];
+                img.alt = dish-item['name'];
 
                 const price = document.createElement('p');
                 price.classList.add('price');
-                price.textContent = dish['price'] + '₽';
+                price.textContent = dish-item['price'] + '₽';
 
                 const dishName = document.createElement('p');
                 dishName.classList.add('dish_name');
-                dishName.textContent = dish['name'];
+                dishName.textContent = dish-item['name'];
 
-                const volume = document.createElement('p');
-                volume.classList.add('volume');
-                volume.textContent = dish['volume'];
+                const ml_gr = document.createElement('p');
+                ml_gr.classList.add('ml_gr');
+                ml_gr.textContent = dish-item['ml_gr'];
 
                 const buttonDiv = document.createElement('div');
-                const button = document.createElement('button');
+                const button = document.createElement('add-button');
                 button.textContent = 'Добавить';
-                buttonDiv.appendChild(button);
+                buttonDiv.appendChild(add-button);
 
                 card.appendChild(img);
                 card.appendChild(price);
                 card.appendChild(dishName);
-                card.appendChild(volume);
+                card.appendChild(ml_gr);
                 card.appendChild(buttonDiv);
 
                 // Функционал кнопки
                 button.addEventListener('click', () => {
-                    addToOrder(dish);
+                    addToOrder(dish-item);
                 });
 
                 return card;
@@ -65,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
             populateCards(SectionDrink, 'Напитки');
 
             // Добавление товаров в заказ и подсчет цены
-            let totalPrice = 0;
-            const totalPriceElement = document.getElementById('total_price');
+            let totalprice = 0;
+            const totalpriceElement = document.getElementById('total_price');
 
             let selectedDishes = {
                 'Супы': null,
@@ -89,9 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
             chosenMain.style.display = 'none';
             drinkLabel.style.display = 'none';
             chosenDrink.style.display = 'none';
-            totalPriceElement.style.display = 'none';
+            totalpriceElement.style.display = 'none';
 
-            const foodPriceElements = document.getElementById('order_summary');
+            const foodpriceElements = document.getElementById('order_summary');
             const priceCount = document.getElementById('price_count');
 
             function addToOrder(dish) {
@@ -112,10 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     emptyMessage.style.display = 'none';
                 }
 
-                FoodPriceElements.textContent = 'Стоимость заказа';
-                FoodPriceElements.style.display = 'block';
-                PriceCount.textContent = `${totalPrice}₽`;
-                PriceCount.style.display = 'block';
+                FoodpriceElements.textContent = 'Стоимость заказа';
+                FoodpriceElements.style.display = 'block';
+                priceCount.textContent = `${totalprice}₽`;
+                priceCount.style.display = 'block';
 
                 showEmptyCategories();
             }
@@ -123,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function updateCategory(category, dish, chosenElement, labelElement) {
                 // Если блюдо из этой категории уже выбрано, вычитаем его цену
                 if (selectedDishes[category] !== null) {
-                    totalPrice -= selectedDishes[category]['price'];
+                    totalprice -= selectedDishes[category]['price'];
                 }
 
                 // Обновляем выбранное блюдо
@@ -133,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 labelElement.style.display = 'block';
 
                 // Добавляем цену выбранного блюда
-                totalPrice += dish['price'];
+                totalprice += dish['price'];
             }
 
             // Показываем пустые категории
