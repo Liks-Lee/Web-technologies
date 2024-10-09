@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let loc = window.location.pathname;
-    let dir = loc.substring(0, loc.lastIndexOf('/'));
-    console.log(dir)
     fetch('dishes_list.json')
         .then(response => response.json())
         .then(data => {
@@ -12,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // Заполнение карточек блюд
-            const SectionSoup = document.querySelectorAll('#soup .dish')[0];
-            const SectionMainDish = document.querySelectorAll('#main_dish .dish')[0];
-            const SectionDrink = document.querySelectorAll('#drink .dish')[0];
+            const SectionSoup = document.querySelectorAll('#soup .dishes-grid')[0];
+            const SectionMainDish = document.querySelectorAll('#main_dish .dishes-grid')[0];
+            const SectionDrink = document.querySelectorAll('#drink .dishes-grid')[0];
 
             function createCard(dish) {
                 const card = document.createElement('div');
@@ -57,25 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             function populateCards(sectionElement, category) {
-            //     sortedDishes.forEach(dish => {
-            //         if (dish['category'] === category) {
-            //             const card = createCard(dish);
-            //             sectionElement.appendChild(card);
-            //         }
-            //     });
-            // }
-                if (!sectionElement) {
-                    console.error(`Section element not found for category: ${category}`);
-                    return;
-                }
-                
                 sortedDishes.forEach(dish => {
-                    if (dish.category === category) {
+                    if (dish['category'] === category) {
                         const card = createCard(dish);
-                        if (!card) {
-                            console.error(`Failed to create card for dish: ${JSON.stringify(dish)}`);
-                            return;
-                        }
                         sectionElement.appendChild(card);
                     }
                 });
