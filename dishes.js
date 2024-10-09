@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 dishName.classList.add('dish_name');
                 dishName.textContent = dish.name;
 
-                const ml_gr = document.createElement('p');
-                ml_gr.classList.add('ml_gr');
-                ml_gr.textContent = dish.volume;
+                const volume = document.createElement('p');
+                volume.classList.add('ml_gr');
+                volume.textContent = dish.volume;
 
                 const buttonDiv = document.createElement('div');
                 const button = document.createElement('button');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.appendChild(img);
                 card.appendChild(price);
                 card.appendChild(dishName);
-                card.appendChild(ml_gr);
+                card.appendChild(volume);
                 card.appendChild(buttonDiv);
 
                 // Функционал кнопки
