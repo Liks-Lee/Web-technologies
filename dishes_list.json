@@ -25,6 +25,22 @@
         "image": "https://i.pinimg.com/564x/28/27/97/2827977d9dc5a535112b524f6c09ba98.jpg"
     },
     {
+        "keyword": "milk_soup",
+        "name": "Молочный суп",
+        "price": 132,
+        "category": "Супы",
+        "volume": "400 г",
+        "image": "https://i.pinimg.com/564x/6c/f0/58/6cf0587570307df2dcae8c22f67efcc6.jpg"
+    },
+    {
+        "keyword": "ramen",
+        "name": "Рамен",
+        "price": 435,
+        "category": "Супы",
+        "volume": "350 г",
+        "image": "https://i.pinimg.com/564x/59/01/d7/5901d78f339dd69f1856116374e4032d.jpg"
+    },
+    {
         "keyword": "Corn-dog",
         "name": "Корн-дог",
         "price": 250,
@@ -49,6 +65,22 @@
         "image": "https://i.pinimg.com/564x/32/96/24/32962432bd4db797be3ece93512d3410.jpg"
     },
     {
+        "keyword": "Onigiri_with_crevetki",
+        "name": "Онигири с креветками",
+        "price": 145,
+        "category": "Главные блюда",
+        "volume": "123 г",
+        "image": "https://i.pinimg.com/564x/13/41/8c/13418c717dd258b67df152398a783d6f.jpg"
+    },
+    {
+        "keyword": "onigiri_classik",
+        "name": "Онигири классические",
+        "price": 123,
+        "category": "Главные блюда",
+        "volume": "123 г",
+        "image": "https://i.pinimg.com/564x/7d/25/6c/7d256c788c8b09a8bcbe0695324ad088.jpg"
+    },
+    {
         "keyword": "bubble_tea_with_topioka",
         "name": "Бабл-ти с топиокой",
         "price": 200,
@@ -71,6 +103,102 @@
         "category": "Напитки",
         "volume": "350 мл",
         "image": "https://i.pinimg.com/564x/69/fe/93/69fe930753105875657ef610fec9759f.jpg"
+    },
+    {
+        "keyword": "green_tea",
+        "name": "Зелёный чай",
+        "price": 100,
+        "category": "Напитки",
+        "volume": "350 мл",
+        "image": "https://i.pinimg.com/564x/df/23/49/df2349232072b2ef0246ed7a126708c8.jpg"
+    },
+    {
+        "keyword": "sakura_black_tea",
+        "name": "Чёрный чай с листьями сакуры",
+        "price": 235,
+        "category": "Напитки",
+        "volume": "300 мл",
+        "image": "https://i.pinimg.com/564x/5e/05/83/5e0583910f3f9e0f2711a905dce0f43e.jpg"
+    },
+    {
+        "keyword": "salad_with_chiken",
+        "name": "Салат с курицей",
+        "price": 412,
+        "category": "Салаты",
+        "volume": "433 г",
+        "image": "https://i.pinimg.com/564x/c1/8f/f2/c18ff22dd8225b3beb66e55f68444416.jpg"
+    },
+    {
+        "keyword": "lorean_carrot",
+        "name": "Морковь по-корейски",
+        "price": 321,
+        "category": "Салаты",
+        "volume": "324 г",
+        "image": "https://i.pinimg.com/564x/4a/9a/e6/4a9ae6b3cf9d00156d4a5ede73feea8a.jpg"
+    },
+    {
+        "keyword": "tsezar",
+        "name": "Цезарь",
+        "price": 234,
+        "category": "Салаты",
+        "volume": "411 г",
+        "image": "https://i.pinimg.com/564x/0c/6d/a2/0c6da2d602d383874bc59b447f310526.jpg"
+    },
+    {
+        "keyword": "olivie",
+        "name": "Оливье",
+        "price": 345,
+        "category": "Салаты",
+        "volume": "123 г",
+        "image": "https://i.pinimg.com/enabled_lo/736x/88/85/0e/88850e6a9cd35eef5c26bfdbead10d5e.jpg"
+    },
+    {
+        "keyword": "Funchoza_salad",
+        "name": "Салат с фунчозой",
+        "price": 347,
+        "category": "Салаты",
+        "volume": "543 г",
+        "image": "https://i.pinimg.com/564x/50/0a/8a/500a8ab650ac4e84bb168e2a41bd26f9.jpg"
+    },
+    {
+        "keyword": "capcake",
+        "name": "Капкейк",
+        "price": 123,
+        "category": "Десерты",
+        "volume": "311 г",
+        "image": "https://i.pinimg.com/564x/f9/fe/ce/f9fecea45b957f7923a60b6640de876d.jpg"
+    },
+    {
+        "keyword": "strawberry_mochi",
+        "name": "Моти с клубникой",
+        "price": 134,
+        "category": "Десерты",
+        "volume": "150 г",
+        "image": "https://i.pinimg.com/564x/42/a4/88/42a488bcc44c92da17a1b225e8bb427a.jpg"
+    },
+    {
+        "keyword": "juice_marmelad",
+        "name": "Мармелад с соком",
+        "price": 645,
+        "category": "Десерты",
+        "volume": "123 г",
+        "image": "https://i.pinimg.com/564x/99/16/07/991607487d9f7617056ad26cdbf20338.jpg"
+    },
+    {
+        "keyword": "jelly_cat",
+        "name": "Желейный котик",
+        "price": 423,
+        "category": "Десерты",
+        "volume": "157 г",
+        "image": "https://i.pinimg.com/736x/30/f6/b7/30f6b7666f1fb3d4ec02ad0e3ad88be7.jpg"
+    },
+    {
+        "keyword": "chhapssall",
+        "name": "Чхапссаль",
+        "price": 312,
+        "category": "Десерты",
+        "volume": "100 г",
+        "image": "https://i.pinimg.com/736x/a4/21/25/a42125a3c1aec61611980b1ec8766519.jpg"
     }
     ]
 }

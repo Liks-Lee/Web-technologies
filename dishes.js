@@ -2,16 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('dishes_list.json')
         .then(response => response.json())
         .then(data => {
-            // Сортировка блюд
-
+            // Сортировка блюд по первой букве
             const sortedDishes = data['dishes'].sort((a, b) => {
                 return a['name'].localeCompare(b['name'], 'ru');
             });
 
-            // Заполнение карточек блюд
+            // Заполнение карточек блюд, используя айди
             const SectionSoup = document.querySelectorAll('#soup .dishes-grid')[0];
             const SectionMainDish = document.querySelectorAll('#main_dish .dishes-grid')[0];
             const SectionDrink = document.querySelectorAll('#drink .dishes-grid')[0];
+            const SectionSalad = document.querySelectorAll('#salad .dishes-grid')[0];
+            const SectionCakes = document.querySelectorAll('#cakes .dishes-grid')[0];
 
             function createCard(dish) {
                 const card = document.createElement('div');
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 return card;
             }
-
+            // Отвечает за заполнение карточек блюд в определенную секцию на основе заданной категории
             function populateCards(sectionElement, category) {
                 sortedDishes.forEach(dish => {
                     if (dish['category'] === category) {
@@ -61,10 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             }
-
+            
+            // Вызов функции
             populateCards(SectionSoup, 'Супы');
             populateCards(SectionMainDish, 'Главные блюда');
             populateCards(SectionDrink, 'Напитки');
+            populateCards(SectionSalad, 'Салаты');
+            populateCards(SectionCakes, 'Десерты');
 
             // Добавление товаров в заказ и подсчет цены
             let totalprice = 0;
@@ -73,16 +77,22 @@ document.addEventListener('DOMContentLoaded', () => {
             let selectedDishes = {
                 'Супы': null,
                 'Главные блюда': null,
-                'Напитки': null
+                'Напитки': null,
+                'Салаты': null,
+                'Дессерты:': null
             };
 
             const chosen_soup = document.getElementById('chosen_soup');
             const chosen_main = document.getElementById('chosen_main');
             const chosen_drink = document.getElementById('chosen_drink');
+            const chosen_salad = document.getElementById('chosen_salad');
+            const chosen_cakes = document.getElementById('chosen_cakes');
             const soup_label = document.getElementById('soup_label');
             const main_label = document.getElementById('main_label');
             const drink_label = document.getElementById('drink_label');
-            const EmptyMessage = document.querySelector('.empty_message');
+            const salad_label = document.getElementById('salad_label');
+            const cakes_label = document.getElementById('cakes_label');
+            const emptyMessage = document.querySelector('.form-section p:nth-of-type(1)');
 
             // Изначально элементы скрыты
             soup_label.style.display = 'none';
@@ -91,10 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
             chosen_main.style.display = 'none';
             drink_label.style.display = 'none';
             chosen_drink.style.display = 'none';
+            chosen_salad.style.display = 'none';
+            salad_label.style.display = 'none';
+            chosen_cakes.style.display = 'none';
+            cakes_label.style.display = 'none';
             totalpriceElement.style.display = 'none';
-
-            const foodpriceElements = document.getElementById('order_summary');
-            const priceCount = document.getElementById('price_count');
 
             function addToOrder(dish) {
                 let isUpdated = false;
@@ -102,11 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (dish['category'] === 'Супы') {
                     updateCategory('Супы', dish, chosen_soup, soup_label);
                     isUpdated = true;
-                } else if (dish['category'] === 'Главные блюда') {
+                } 
+                else if (dish['category'] === 'Главные блюда') {
                     updateCategory('Главные блюда', dish, chosen_main, main_label);
                     isUpdated = true;
-                } else if (dish['category'] === 'Напитки') {
+                } 
+                else if (dish['category'] === 'Напитки') {
                     updateCategory('Напитки', dish, chosen_drink, drink_label);
+                    isUpdated = true;
+                }
+                else if (dish['category'] === 'Салаты') {
+                    updateCategory('Салаты', dish, chosen_salad, salad_label);
+                    isUpdated = true;
+                }
+                else if (dish['category'] === 'Десерты') {
+                    updateCategory('Десерты', dish, chosen_cakes, cakes_label);
                     isUpdated = true;
                 }
 
@@ -114,15 +135,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     emptyMessage.style.display = 'none';
                 }
 
-                foodpriceElements.textContent = 'Стоимость заказа';
-                foodpriceElements.style.display = 'block';
-                priceCount.textContent = `${totalprice}₽`;
-                priceCount.style.display = 'block';
+                totalpriceElement.textContent = `Стоимость заказа: ${totalprice}₽`;
+                totalpriceElement.style.display = 'block';
 
                 showEmptyCategories();
             }
 
-        function updateCategory(category, dish, chosenElement, labelElement) {
+            function updateCategory(category, dish, chosenElement, labelElement) {
                 // Если блюдо из этой категории уже выбрано, вычитаем его цену
                 if (selectedDishes[category] !== null) {
                     totalprice -= selectedDishes[category].price;
@@ -140,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Показываем пустые категории
             function showEmptyCategories() {
+                console.log(selectedDishes)
                 if (selectedDishes['Супы'] === null) {
                     chosen_soup.textContent = 'Блюдо не выбрано';
                     soup_label.style.display = 'block';
@@ -155,6 +175,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     drink_label.style.display = 'block';
                     chosen_drink.style.display = 'block';
                 }
+                if (selectedDishes['Салаты'] === null) {
+                    chosen_drink.textContent = 'Блюдо не выбрано';
+                    salad_label.style.display = 'block';
+                    chosen_salad.style.display = 'block';
+                }
+                if (selectedDishes['Десерты'] === null) {
+                    chosen_drink.textContent = 'Блюдо не выбрано';
+                    cakes_label.style.display = 'block';
+                    chosen_cakes.style.display = 'block';
+                }
             }
+            
+            //* Написать фильтровку */
+            
         });
+
 });
