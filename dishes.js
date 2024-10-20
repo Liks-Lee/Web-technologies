@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 return card;
             }
+
+
             // Отвечает за заполнение карточек блюд в определенную секцию на основе заданной категории
             function populateCards(sectionElement, category) {
                 sortedDishes.forEach(dish => {
@@ -68,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             populateCards(SectionMainDish, 'Главные блюда');
             populateCards(SectionDrink, 'Напитки');
             populateCards(SectionSalad, 'Салаты');
-            populateCards(SectionCakes, 'Десерты');
+            populateCards(SectionCakes, 'Десерты'); 
 
             // Добавление товаров в заказ и подсчет цены
             let totalprice = 0;
@@ -79,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Главные блюда': null,
                 'Напитки': null,
                 'Салаты': null,
-                'Дессерты:': null
+                'Десерты:': null,
             };
 
             const chosen_soup = document.getElementById('chosen_soup');
@@ -106,6 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
             chosen_cakes.style.display = 'none';
             cakes_label.style.display = 'none';
             totalpriceElement.style.display = 'none';
+
+            const foodpriceElements = document.getElementById('order_summary');
+            const priceCount = document.getElementById('price_count')
 
             function addToOrder(dish) {
                 let isUpdated = false;
@@ -176,12 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     chosen_drink.style.display = 'block';
                 }
                 if (selectedDishes['Салаты'] === null) {
-                    chosen_drink.textContent = 'Блюдо не выбрано';
+                    chosen_salad.textContent = 'Блюдо не выбрано';
                     salad_label.style.display = 'block';
                     chosen_salad.style.display = 'block';
                 }
                 if (selectedDishes['Десерты'] === null) {
-                    chosen_drink.textContent = 'Блюдо не выбрано';
+                    chosen_cakes.textContent = 'Блюдо не выбрано';
                     cakes_label.style.display = 'block';
                     chosen_cakes.style.display = 'block';
                 }
