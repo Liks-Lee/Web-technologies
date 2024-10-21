@@ -141,6 +141,7 @@
         "price": 412,
         "category": "Салаты",
         "volume": "433 г",
+        "type": "meat",
         "image": "https://i.pinimg.com/564x/c1/8f/f2/c18ff22dd8225b3beb66e55f68444416.jpg"
     },
     {
@@ -158,6 +159,7 @@
         "price": 234,
         "category": "Салаты",
         "volume": "411 г",
+        "type": "meat",
         "image": "https://i.pinimg.com/564x/0c/6d/a2/0c6da2d602d383874bc59b447f310526.jpg"
     },
     {
@@ -166,6 +168,7 @@
         "price": 345,
         "category": "Салаты",
         "volume": "123 г",
+        "type": "veg",
         "image": "https://i.pinimg.com/enabled_lo/736x/88/85/0e/88850e6a9cd35eef5c26bfdbead10d5e.jpg"
     },
     {
@@ -183,6 +186,7 @@
         "price": 123,
         "category": "Десерты",
         "volume": "311 г",
+        "type": "milk",
         "image": "https://i.pinimg.com/564x/f9/fe/ce/f9fecea45b957f7923a60b6640de876d.jpg"
     },
     {
@@ -197,7 +201,7 @@
     {
         "keyword": "juice_marmelad",
         "name": "Мармелад с соком",
-        "price": 645,
+        "price": 145,
         "category": "Десерты",
         "volume": "123 г",
         "type": "veg",
@@ -206,7 +210,7 @@
     {
         "keyword": "jelly_cat",
         "name": "Желейный котик",
-        "price": 423,
+        "price": 223,
         "category": "Десерты",
         "volume": "157 г",
         "type": "milk",
@@ -215,7 +219,7 @@
     {
         "keyword": "chhapssall",
         "name": "Чхапссаль",
-        "price": 312,
+        "price": 212,
         "category": "Десерты",
         "volume": "100 г",
         "type": "milk",

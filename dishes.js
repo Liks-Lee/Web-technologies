@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Главные блюда': null,
                 'Напитки': null,
                 'Салаты': null,
-                'Десерты:': null,
+                'Десерты': null,
             };
 
             const chosen_soup = document.getElementById('chosen_soup');
@@ -128,10 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     isUpdated = true;
                 }
                 else if (dish['category'] === 'Салаты') {
+                    console.log(salad_label)
+                    console.log(chosen_salad)
                     updateCategory('Салаты', dish, chosen_salad, salad_label);
                     isUpdated = true;
                 }
                 else if (dish['category'] === 'Десерты') {
+                    console.log(cakes_label)
+                    console.log(chosen_cakes)
                     updateCategory('Десерты', dish, chosen_cakes, cakes_label);
                     isUpdated = true;
                 }
