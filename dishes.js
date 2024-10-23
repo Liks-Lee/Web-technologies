@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             function createCard(dish) {
                 const card = document.createElement('div');
                 card.classList.add('dish-item');
+                card.dataset.type = dish.type
 
                 const img = document.createElement('img');
                 img.src = dish.image;
@@ -197,7 +198,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             //* Написать фильтровку */
+
+            const SoupFilter = document.querySelectorAll('.soup-filter');
+            const MainFilter = document.querySelectorAll('.main_dish-filter');
+            const DrinkFilter = document.querySelectorAll('.drink-filter');
+            const SaladFilter = document.querySelectorAll('.salad-filter');
+            const CakesFilter = document.querySelectorAll('.cakes-filter');
+            
+            function DishFilter(elem){
+                
+            }
+
+            DishFilter(SoupFilter);
+            DishFilter(MainFilter);
+            DishFilter(DrinkFilter);
+            DishFilter(SaladFilter);
+            DishFilter(CakesFilter);
             
         });
-
 });
