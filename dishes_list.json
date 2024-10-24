@@ -190,6 +190,15 @@
         "image": "https://i.pinimg.com/564x/0c/6d/a2/0c6da2d602d383874bc59b447f310526.jpg"
     },
     {
+        "keyword": "tsezar_crevetki",
+        "name": "Цезарь с креветками",
+        "price": 234,
+        "category": "Салаты",
+        "volume": "411 г",
+        "type": "meat",
+        "image": "https://i.pinimg.com/564x/59/d0/cd/59d0cda10e3cc72bf88cb720a28b277a.jpg"
+    },
+    {
         "keyword": "olivie",
         "name": "Оливье",
         "price": 345,
@@ -249,7 +258,7 @@
         "price": 223,
         "category": "Десерты",
         "volume": "157 г",
-        "type": "middle",
+        "type": "small",
         "image": "https://i.pinimg.com/736x/30/f6/b7/30f6b7666f1fb3d4ec02ad0e3ad88be7.jpg"
     },
     {

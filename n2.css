@@ -206,7 +206,7 @@ textarea {
     border-radius: 35px;
 }
 
-.filters.active {
+.filters .active {
     background-color: rgba(145, 239, 142, 28);
 }
 
