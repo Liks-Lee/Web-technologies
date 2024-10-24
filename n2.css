@@ -198,4 +198,24 @@ textarea {
     height: 80px;
 }
 
+.filters a {
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: green;
+    border-radius: 35px;
+}
+
+.filters.active {
+    background-color: rgba(145, 239, 142, 28);
+}
+
+.hidden {
+    display: none;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
 

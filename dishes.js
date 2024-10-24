@@ -205,8 +205,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const SaladFilter = document.querySelectorAll('.salad-filter');
             const CakesFilter = document.querySelectorAll('.cakes-filter');
             
-            function DishFilter(elem){
-                
+            function DishFilter(filters){
+                filters.forEach(filter => {
+                    filter.addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        const className = filter.classList[0].split('-')[0];
+                        const dishes = document.querySelectorAll(`#${className} .dish-item`);
+
+                        if (!filter.classList.contains('active')) {
+                            filters.forEach(f => f.classList.remove('active'));
+                            filter.classList.add('active');
+                            const type = filter.dataset.type;
+                            dishes.forEach(dish => {
+                                if (dish.dataset.type === type) {
+                                    dish.classList.remove('hidden');
+                                } else {
+                                    dish.classList.add('hidden');
+                                }
+                            });
+                        } else {
+                            filter.classList.remove('active');
+                            dishes.forEach(dish => dish.classList.remove('hidden'));
+                        }
+                    });
+                });
             }
 
             DishFilter(SoupFilter);
