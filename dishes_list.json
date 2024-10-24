@@ -6,7 +6,7 @@
         "price": 365,
         "category": "Супы",
         "volume": "300 г",
-        "type": "meat",
+        "type": "milk",
         "image": "https://i.pinimg.com/564x/2e/f8/b9/2ef8b92d4ddaa1a9eac435e3f2855fdb.jpg"
     },
     {
@@ -24,7 +24,7 @@
         "price": 251,
         "category": "Супы",
         "volume": "250 г",
-        "type": "meat",
+        "type": "veg",
         "image": "https://i.pinimg.com/564x/28/27/97/2827977d9dc5a535112b524f6c09ba98.jpg"
     },
     {
@@ -46,6 +46,15 @@
         "image": "https://i.pinimg.com/564x/59/01/d7/5901d78f339dd69f1856116374e4032d.jpg"
     },
     {
+        "keyword": "ramen_s_ovoch",
+        "name": "Рамен с овощами",
+        "price": 435,
+        "category": "Супы",
+        "volume": "350 г",
+        "type": "veg",
+        "image": "https://i.pinimg.com/564x/84/ba/8c/84ba8c83460b201d432d6e61a020d33f.jpg"
+    },
+    {
         "keyword": "Corn-dog",
         "name": "Корн-дог",
         "price": 250,
@@ -60,7 +69,7 @@
         "price": 251,
         "category": "Главные блюда",
         "volume": "250 г",
-        "type": "meat",
+        "type": "milk",
         "image": "https://i.pinimg.com/564x/75/44/44/754444093eb61c3509c6c380214bdbcb.jpg"
     },
     {
@@ -69,7 +78,7 @@
         "price": 301,
         "category": "Главные блюда",
         "volume": "350 г",
-        "type": "meat",
+        "type": "milk",
         "image": "https://i.pinimg.com/564x/32/96/24/32962432bd4db797be3ece93512d3410.jpg"
     },
     {
@@ -87,8 +96,17 @@
         "price": 123,
         "category": "Главные блюда",
         "volume": "123 г",
-        "type": "meat",
+        "type": "veg",
         "image": "https://i.pinimg.com/564x/7d/25/6c/7d256c788c8b09a8bcbe0695324ad088.jpg"
+    },
+    {
+        "keyword": "onigiri_ovoch",
+        "name": "Онигири с овощами",
+        "price": 123,
+        "category": "Главные блюда",
+        "volume": "123 г",
+        "type": "veg",
+        "image": "https://i.pinimg.com/enabled_lo/564x/83/58/50/835850d846d099dc15f551576bbc5409.jpg"
     },
     {
         "keyword": "bubble_tea_with_topioka",
@@ -96,7 +114,7 @@
         "price": 200,
         "category": "Напитки",
         "volume": "300 мл",
-        "type": "veg",
+        "type": "cold",
         "image": "https://i.pinimg.com/564x/7e/7b/bf/7e7bbfb70cbf1c488ba1707b2e7d90e5.jpg"
     },
     {
@@ -105,7 +123,7 @@
         "price": 250,
         "category": "Напитки",
         "volume": "250 мл",
-        "type": "veg",
+        "type": "cold",
         "image": "https://i.pinimg.com/564x/a4/31/21/a431213d5671a83ef47dc08af269a3e4.jpg"
     },
     {
@@ -114,7 +132,7 @@
         "price": 300,
         "category": "Напитки",
         "volume": "350 мл",
-        "type": "veg",
+        "type": "cold",
         "image": "https://i.pinimg.com/564x/69/fe/93/69fe930753105875657ef610fec9759f.jpg"
     },
     {
@@ -123,7 +141,7 @@
         "price": 100,
         "category": "Напитки",
         "volume": "350 мл",
-        "type": "veg",
+        "type": "hot",
         "image": "https://i.pinimg.com/564x/df/23/49/df2349232072b2ef0246ed7a126708c8.jpg"
     },
     {
@@ -132,8 +150,17 @@
         "price": 235,
         "category": "Напитки",
         "volume": "300 мл",
-        "type": "veg",
+        "type": "hot",
         "image": "https://i.pinimg.com/564x/5e/05/83/5e0583910f3f9e0f2711a905dce0f43e.jpg"
+    },
+    {
+        "keyword": "black_tea",
+        "name": "Чёрный чай",
+        "price": 235,
+        "category": "Напитки",
+        "volume": "300 мл",
+        "type": "hot",
+        "image": "https://i.pinimg.com/enabled_lo/564x/80/0a/44/800a440622556f2b66f44ceac0120888.jpg"
     },
     {
         "keyword": "salad_with_chiken",
@@ -168,7 +195,7 @@
         "price": 345,
         "category": "Салаты",
         "volume": "123 г",
-        "type": "veg",
+        "type": "milk",
         "image": "https://i.pinimg.com/enabled_lo/736x/88/85/0e/88850e6a9cd35eef5c26bfdbead10d5e.jpg"
     },
     {
@@ -177,7 +204,7 @@
         "price": 347,
         "category": "Салаты",
         "volume": "543 г",
-        "type": "veg",
+        "type": "meat",
         "image": "https://i.pinimg.com/564x/50/0a/8a/500a8ab650ac4e84bb168e2a41bd26f9.jpg"
     },
     {
@@ -186,8 +213,17 @@
         "price": 123,
         "category": "Десерты",
         "volume": "311 г",
-        "type": "milk",
+        "type": "small",
         "image": "https://i.pinimg.com/564x/f9/fe/ce/f9fecea45b957f7923a60b6640de876d.jpg"
+    },
+    {
+        "keyword": "capcake_strawberry",
+        "name": "Капкейк с клубникой",
+        "price": 123,
+        "category": "Десерты",
+        "volume": "311 г",
+        "type": "small",
+        "image": "https://i.pinimg.com/564x/a0/2e/89/a02e899b5db3e6603aa22563ccdd4397.jpg"
     },
     {
         "keyword": "strawberry_mochi",
@@ -195,7 +231,7 @@
         "price": 134,
         "category": "Десерты",
         "volume": "150 г",
-        "type": "veg",
+        "type": "big",
         "image": "https://i.pinimg.com/564x/42/a4/88/42a488bcc44c92da17a1b225e8bb427a.jpg"
     },
     {
@@ -204,7 +240,7 @@
         "price": 145,
         "category": "Десерты",
         "volume": "123 г",
-        "type": "veg",
+        "type": "middle",
         "image": "https://i.pinimg.com/564x/99/16/07/991607487d9f7617056ad26cdbf20338.jpg"
     },
     {
@@ -213,7 +249,7 @@
         "price": 223,
         "category": "Десерты",
         "volume": "157 г",
-        "type": "milk",
+        "type": "middle",
         "image": "https://i.pinimg.com/736x/30/f6/b7/30f6b7666f1fb3d4ec02ad0e3ad88be7.jpg"
     },
     {
@@ -222,7 +258,7 @@
         "price": 212,
         "category": "Десерты",
         "volume": "100 г",
-        "type": "milk",
+        "type": "middle",
         "image": "https://i.pinimg.com/736x/a4/21/25/a42125a3c1aec61611980b1ec8766519.jpg"
     }
     ]
