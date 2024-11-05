@@ -238,5 +238,62 @@ document.addEventListener('DOMContentLoaded', () => {
             DishFilter(SaladFilter);
             DishFilter(CakesFilter);
             
+            const combos = [
+                { name: 'Ланч 1', items: ['Супы', 'Главные блюда', 'Салаты', 'Напитки'] },
+                { name: 'Ланч 2', items: ['Супы', 'Главные блюда', 'Напитки'] },
+                { name: 'Ланч 3', items: ['Супы', 'Салаты', 'Напитки'] },
+                { name: 'Ланч 4', items: ['Главные блюда', 'Салаты', 'Напитки'] },
+                { name: 'Ланч 5', items: ['Главные блюда', 'Напитки'] },
+            ];
+
+            function validateOrder(selectedItems) {
+                let dishes = Object.keys(selectedItems).filter(key => key !== 'Десерты' && selectedItems[key] !== null);
+                let text = '';
+
+                if (dishes.length === 0 && selectedItems['Десерты'] === null) {
+                    text = 'Ничего не выбрано. Выберите блюда для заказа'
+                } else if (!(dishes.includes('Напитки')) && dishes.length > 0) {
+                    text = 'Выберите Напитки';
+                } else if ((dishes.includes('Напитки') || !(selectedItems['Десерты'] === null) && !dishes.includes('Главные блюда'))) {
+                    text = 'Выберите Главные блюда';
+                }
+
+                if (dishes.includes('Супы') && !dishes.includes('Главные блюда') && !dishes.includes('Салаты')) {
+                    text = 'Выберите Главные блюда или Салаты';
+                } else if (dishes.includes('Салаты') && (!dishes.includes('Главные блюда') || !dishes.includes('Супы'))) {
+                    text = 'Выберите Супы или Главные блюда';
+                }
+
+                for (const combo in combos) {
+                    if (dishes === combo.items) {
+                        return {valid: true, message: 'Все блюда успешно выбраны'};
+                    }
+                }
+                return {valid: false, message: text};
+            }
+
+            document.querySelector('form').addEventListener('submit', function (event) {
+                const result = validateOrder(selectedDishes);
+                if (!result.valid) {
+                    event.preventDefault();
+                    displayNotification(result.message);
+                }
+            });
+
+            function displayNotification(message) {
+                const notification = document.getElementById('notification');
+
+                const notificationMessage = document.createElement('p');
+                notificationMessage.textContent = message
+                notification.appendChild(notificationMessage);
+
+                const notificationButton = document.createElement('button');
+                notificationButton.innerHTML = 'Хорошо <span>&#x1f394;</span>';
+                notificationButton.addEventListener('click', function () {
+                    const notification = document.getElementById('notification');
+                    notification.innerHTML = '';
+                })
+                notification.appendChild(notificationButton);
+            }
         });
 });

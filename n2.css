@@ -207,7 +207,7 @@ textarea {
 }
 
 .filters .active {
-    background-color: rgba(145, 239, 142, 28);
+    background-color: rgba(145, 239, 142, 16);
 }
 
 .hidden {
@@ -218,4 +218,69 @@ textarea {
     margin-bottom: 20px;
 }
 
+.custom-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.custom-notification button {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.custom-notification button:hover {
+    background-color: gray;
+}
+
+.combo-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.combo-variant {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.combo-dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#combo h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.combo-dish img {
+    width: 5em;
+    height: auto;
+}
+
+.combo-dish img:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+
+.combo-dish p {
+    margin-bottom: 0;
+}
+
+.combo-dish p:nth-of-type(2) {
+    font-size: 10px;
+}
 

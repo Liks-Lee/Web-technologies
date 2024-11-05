@@ -194,12 +194,133 @@
                     </div>
                     <div class="dishes-grid"></div>
                 </section>
+
+                <section id="combo">
+                    <h2>Доступные для заказа комбо:</h2>
+                    <div class="combo-block">
+                        <!-- 1  Комбо  -->
+                        <div class="combo-variant">
+                            <div class="combo-dish">
+                                <img
+                                    src="soup.svg"
+                                    alt="Супы">
+                                <p>Суп</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="main_dish.svg"
+                                    alt="Главные блюда">
+                                <p>Главное блюдо</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="salad.svg"
+                                    alt="Салаты">
+                                <p>Салат</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="drink.svg"
+                                    alt="Напитки">
+                                <p>Напиток</p>
+                            </div>
+                        </div>
+                        <!-- 2 Комбо -->
+                        <div class="combo-variant">
+                            <div class="combo-dish">
+                                <img
+                                    src="soup.svg"
+                                    alt="Супы">
+                                <p>Суп</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="main_dish.svg"
+                                    alt="Главные блюда">
+                                <p>Главное блюдо</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="drink.svg"
+                                    alt="Напитки">
+                                <p>Напиток</p>
+                            </div>
+                        </div>
+                        <!-- 3 Комбо -->
+                        <div class="combo-variant">
+                            <div class="combo-dish">
+                                <img
+                                    src="soup.svg"
+                                    alt="Супы">
+                                <p>Суп</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="salad.svg"
+                                    alt="Салаты">
+                                <p>Салат</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="drink.svg"
+                                    alt="Напитки">
+                                <p>Напиток</p>
+                            </div>
+                        </div>
+                        <!-- 4 Комбо -->
+                        <div class="combo-variant">
+                            <div class="combo-dish">
+                                <img
+                                    src="main_dish.svg"
+                                    alt="Главные блюда">
+                                <p>Главное блюдо</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="salad.svg"
+                                    alt="Салаты">
+                                <p>Салат</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="drink.svg"
+                                    alt="Напитки">
+                                <p>Напиток</p>
+                            </div>
+                        </div>
+                        <!-- 5 Комбо -->
+                        <div class="combo-variant">
+                            <div class="combo-dish">
+                                <img
+                                    src="main_dish.svg"
+                                    alt="Главные блюда">
+                                <p>Главное блюдо</p>
+                            </div>
+                            <div class="combo-dish">
+                                <img
+                                    src="drink.svg"
+                                    alt="Напитки">
+                                <p>Напиток</p>
+                            </div>
+                        </div>
+                        <!-- 6 Комбо -->
+                        <div class="combo-variant">
+                            <div class="combo-dish">
+                                <img
+                                    src="dessert.svg"
+                                    alt="Десерты">
+                                <p>Десерт</p>
+                                <p><i>(Можно добавить к любому заказу)</i></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             
                 <form id="orderForm" action="https://httpbin.org/post" method="post" class="form-container">
                     <section class="form-section">
                     <h2>Ваш заказ</h2>
             
-                        <p>Ничего не выбрано</p>
+                        <p><b>Ничего не выбрано</b></p>
 
                         <p id="soup_label"><b>Суп</b></p>
                         <p id="chosen_soup">Блюдо не выбрано</p>
@@ -264,6 +385,9 @@
                             <button class="add-button" type="submit">Отправить</button>
                         </div>
                     </section>
+
+                    <div id="notification" class="custom-notification"></div>
+
                 </main>
             <article>
                 <h2>!Обратная связь!</h2>
