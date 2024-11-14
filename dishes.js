@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('dishes_list.json')
+    fetch('https://edu.std-900.ist.mospolytech.ru/labs/api/dishes')
         .then(response => response.json())
         .then(data => {
             // Сортировка блюд по первой букве
-            const sortedDishes = data['dishes'].sort((a, b) => {
+            const sortedDishes = data.sort((a, b) => {
                 return a['name'].localeCompare(b['name'], 'ru');
             });
 
@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
             function createCard(dish) {
                 const card = document.createElement('div');
                 card.classList.add('dish-item');
-                card.dataset.type = dish.type
+                card.dataset.kind = dish.kind
 
                 const img = document.createElement('img');
-                img.src = dish.image;
+                img.src = dish['image'];
                 img.alt = dish.name;
 
                 const price = document.createElement('p');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const volume = document.createElement('p');
                 volume.classList.add('ml_gr');
-                volume.textContent = dish.volume;
+                volume.textContent = dish.count;
 
                 const buttonDiv = document.createElement('div');
                 const button = document.createElement('button');
@@ -58,8 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Отвечает за заполнение карточек блюд в определенную секцию на основе заданной категории
             function populateCards(sectionElement, category) {
+                const categoryCompare = {
+                    'soup': 'Супы',
+                    'main-course': 'Главные блюда',
+                    'salad': 'Салаты',
+                    'drink': 'Напитки',
+                    'dessert': 'Десерты'
+                }
+
                 sortedDishes.forEach(dish => {
-                    if (dish['category'] === category) {
+                    if (categoryCompare[dish['category']] === category) {
                         const card = createCard(dish);
                         sectionElement.appendChild(card);
                     }
@@ -95,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const drink_label = document.getElementById('drink_label');
             const salad_label = document.getElementById('salad_label');
             const cakes_label = document.getElementById('cakes_label');
-            const emptyMessage = document.querySelector('.form-section p:nth-of-type(1)');
+            const emptyMessage = document.getElementById('empty');
 
             // Изначально элементы скрыты
             soup_label.style.display = 'none';
@@ -116,30 +124,33 @@ document.addEventListener('DOMContentLoaded', () => {
             function addToOrder(dish) {
                 let isUpdated = false;
 
-                if (dish['category'] === 'Супы') {
+                console.log(dish);
+
+                if (dish['category'] === 'soup') {
                     updateCategory('Супы', dish, chosen_soup, soup_label);
                     isUpdated = true;
                 } 
-                else if (dish['category'] === 'Главные блюда') {
+                else if (dish['category'] === 'main-course') {
                     updateCategory('Главные блюда', dish, chosen_main, main_label);
                     isUpdated = true;
                 } 
-                else if (dish['category'] === 'Напитки') {
+                else if (dish['category'] === 'drink') {
                     updateCategory('Напитки', dish, chosen_drink, drink_label);
                     isUpdated = true;
                 }
-                else if (dish['category'] === 'Салаты') {
+                else if (dish['category'] === 'salad') {
                     console.log(salad_label)
                     console.log(chosen_salad)
                     updateCategory('Салаты', dish, chosen_salad, salad_label);
                     isUpdated = true;
                 }
-                else if (dish['category'] === 'Десерты') {
+                else if (dish['category'] === 'dessert') {
                     console.log(cakes_label)
                     console.log(chosen_cakes)
                     updateCategory('Десерты', dish, chosen_cakes, cakes_label);
                     isUpdated = true;
                 }
+                console.log(emptyMessage)
 
                 if (isUpdated) {
                     emptyMessage.style.display = 'none';
@@ -154,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
             function updateCategory(category, dish, chosenElement, labelElement) {
                 // Если блюдо из этой категории уже выбрано, вычитаем его цену
                 if (selectedDishes[category] !== null) {
-                    totalprice -= selectedDishes[category].price;
+                    totalprice -= selectedDishes[category['price']];
                 }
 
                 // Обновляем выбранное блюдо
@@ -196,6 +207,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     chosen_cakes.style.display = 'block';
                 }
             }
+
+            document.querySelector('form').addEventListener('reset', function () {
+                soup_label.style.display = 'none';
+                chosen_soup.style.display = 'none';
+                main_label.style.display = 'none';
+                chosen_main.style.display = 'none';
+                drink_label.style.display = 'none';
+                chosen_drink.style.display = 'none';
+                salad_label.style.display = 'none';
+                chosen_salad.style.display = 'none';
+                dessert_label.style.display = 'none';
+                chosen_dessert.style.display = 'none';
+                totalpriceElement.style.display = 'none';
+
+                nothingSelectedMessage.style.display = '';
+
+                selectedDishes = {
+                    'Супы': null,
+                    'Главные блюда': null,
+                    'Салаты': null,
+                    'Напитки': null,
+                    'Десерты': null
+                };
+
+                totalprice = 0;
+            })
             
             //* Написать фильтровку */
 
@@ -216,9 +253,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (!filter.classList.contains('active')) {
                             filters.forEach(f => f.classList.remove('active'));
                             filter.classList.add('active');
-                            const type = filter.dataset.type;
+                            const kind = filter.dataset.kind;
                             dishes.forEach(dish => {
-                                if (dish.dataset.type === type) {
+                                if (dish.dataset.kind === kind) {
                                     dish.classList.remove('hidden');
                                 } else {
                                     dish.classList.add('hidden');
@@ -253,15 +290,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (dishes.length === 0 && selectedItems['Десерты'] === null) {
                     text = 'Ничего не выбрано. Выберите блюда для заказа'
                 } else if (!(dishes.includes('Напитки')) && dishes.length > 0) {
-                    text = 'Выберите Напитки';
+                    text = 'Выберите drink';
                 } else if ((dishes.includes('Напитки') || !(selectedItems['Десерты'] === null) && !dishes.includes('Главные блюда'))) {
-                    text = 'Выберите Главные блюда';
+                    text = 'Выберите main-course';
                 }
 
                 if (dishes.includes('Супы') && !dishes.includes('Главные блюда') && !dishes.includes('Салаты')) {
-                    text = 'Выберите Главные блюда или Салаты';
+                    text = 'Выберите main-course или salad';
                 } else if (dishes.includes('Салаты') && (!dishes.includes('Главные блюда') || !dishes.includes('Супы'))) {
-                    text = 'Выберите Супы или Главные блюда';
+                    text = 'Выберите soup или main-course';
                 }
 
                 for (const combo in combos) {
