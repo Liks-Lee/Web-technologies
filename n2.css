@@ -229,6 +229,7 @@ textarea {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: opacity 0.3s ease-in-out;
+    opacity: 0;
 }
 
 .custom-notification button {
@@ -284,3 +285,15 @@ textarea {
     font-size: 10px;
 }
 
+#order_info {
+    position: sticky;
+    bottom: 10px;
+    padding-bottom: 5px;
+    background-color: white;
+    border-radius: 35px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    text-align: center;
+}
+#order_info p {
+    font-size: 20px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title> Ne_cafe by 231-3211 menu </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="n2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <script src="make_order.js"></script>
+</head>
+<body>
+    <div class ="container">
+    <header class = "contacts">
+        <h1 class = "head1">~✰Food Construct✰~ </h1>
+        <nav>
+            <h2>
+                <a class="link" href="index.html">Главная</a>
+                <a class="link" href="dish_page.html">Собрать заказ</a>
+                <a class = "link" href="make_order.html" id = "active">Оформить</a>
+                <a class = "link" href="#">Заказы</a>
+                <a class="link" href="#about_us"> О нас </a>
+                <a class="link" href="#contact"> Контакты </a>
+            </h2>
+        </nav>
+    </div>
+    </header>
+    <main>
+        <div class ="container">
+        
+        <section id="selected_dishes">
+            <h2>Состав заказа</h2>
+            <div class="dishes-grid">
+                <p class="nothing_selected">Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу
+                <a class="link" href="dish_page.html">"Собрать ланч"</a>.</p>
+            </div>
+        </section>
+        <section id="container">
+            <h2>Сделать заказ</h2>
+            <form class="dishes-grid">
+                <div class="filters">
+                    <p>Ваш заказ</p>
+                    <p class="nothing_selected"><b>Ничего не выбрано</b></p>
+                    <p id="soup_label"><b>Суп</b></p>
+                    <p id="chosen_soup">Блюдо не выбрано</p>
+                    <p id="main_label"><b>Главное блюдо</b></p>
+                    <p id="chosen_main">Блюдо не выбрано</p>
+                    <p id="salad_label"><b>Салат</b></p>
+                    <p id="chosen_salad">Блюдо не выбрано</p>
+                    <p id="drink_label"><b>Напиток</b></p>
+                    <p id="chosen_drink">Блюдо не выбрано</p>
+                    <p id="dessert_label"><b>Десерт</b></p>
+                    <p id="chosen_dessert">Блюдо не выбрано</p>
+                    <p id="total_price">Стоимость заказа: 0₽</p>
+                    <label for="comments">Комментарии к заказу</label>
+                    <textarea id="comments" rows="8"></textarea>
+                </div>
+                <div class="order_section">
+                    <p>Ваши данные</p>
+
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="subscribe_checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe" checked>
+                        <label for="subscribe">Получать информацию о скидках и акциях</label>
+                    </div>
+
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="address">Адрес доставки</label>
+                    <input type="text" id="address" name="address" required>
+                    <p class="note"><i>Доставка осуществляется только по Москве</i></p>
+                    <p>Время доставки:</p>
+                    <label><input type="radio" value="asap" name="time-type" required> Как можно скорее</label>
+                    <label><input type="radio" value="specific" name="time-type" required> К указанному времени</label>
+                    <label for="delivery-time">Укажите время доставки</label>
+                    <input type="time" id="delivery-time" name="time" min="07:00" max="23:00" step="300">
+                    <p class="note">Доступное время доставки с 7:00 до 23:00</p>
+
+                    <div class="form_actions">
+                        <button type="reset">Сбросить</button>
+                        <button type="submit">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div id="notification" class="custom-notification"></div>
+    </div>
+    </main>
+    <article class = "container">
+        <h2>!Обратная связь!</h2>
+        <footer id = "contact" class="contacts"> 
+            <p> Позвонить нам: <a class = "link" href = "tel:+79239722325" > 
+                +7-923-972-23-25 </a> <br>
+                Егорова Ксения <br>
+                Почта: <a class = "link" href="mailto:kseniacatrin@gmail.com"> kseniacatrin@gmail.com</a> 
+            </p>
+        </footer>
+    </article>
+</body>
+</html>
