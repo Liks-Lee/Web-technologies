@@ -1,0 +1,137 @@
+
+#orders {
+    width: 80%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-left: none;
+    border-right: none;
+}
+#orders tr th {
+    border-left: none;
+    border-right: none;
+}
+#orders tr td {
+    border-left: none;
+    border-right: none;
+}
+.actions {
+    display: flex;
+}
+.actions button {
+    border: none;
+    background: none;
+    width: 5vh;
+    height: 5vh;
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 35vw;
+    border-radius: 5px;
+    max-width: 30%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close {
+    cursor: pointer;
+}
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.modal-body div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modal-body div div {
+    display: flex;
+    flex-direction: column;
+}
+.modal-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+}
+#saveButton {
+    background-color: limegreen;
+    color: white;
+}
+#deleteButton {
+    background-color: red;
+}
+.modal-buttons button {
+    background-color: #f1eee9;
+    margin-top: 10px;
+    padding: 10px 30px 10px 30px;
+    border: None;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.head1 {
+    text-align: center;
+    background-color: rgb(235, 193, 115);
+    color: rgb(228, 91, 212);
+    font-size: 60px; /*Размер шрифта*/
+}
+
+.contacts{
+    text-align: center; /*Отцентровка*/
+    width: 100%;
+    background-color: rgb(235, 193, 115);
+    padding-top: 25px;
+    margin-top: auto;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px /* Увеличенные внутренние отступы */ 
+    link="white" 
+    alink="red";
+}
+
+.container { 
+    display: flex; /* Создаем гибкую структуру */ 
+    flex-direction: column; /* Располагаем элементы вертикально */ 
+    min-height: 100vh; /* Минимальная высота равна высоте вьюпорта */ 
+    max-width: 1000px; /* Уменьшение максимальной ширины */ 
+    margin: 0 auto; /* Автоматические поля*/ 
+    padding: 20px; /* Увеличенные внутренние отступы */ 
+    background-color: #fff; /* Фон для содержания */ 
+}
+
+.link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nerko One", cursive;
+}
+
+.link:hover {
+    color: rgb(154, 66, 158);
+    text-decoration: underline;
+}
+
+

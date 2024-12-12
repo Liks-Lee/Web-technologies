@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title> Ne_cafe by 231-3211 menu </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="n2.css">
+        <link rel="stylesheet" href="order_styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+        <script src="orders.js"></script>
+    </head>
+    <body>
+        <div class ="container">
+            <div>
+            <header class = "contacts">
+                <h1 class = "head1">~✰Food Construct✰~ </h1>
+                <nav>
+                    <h2>
+                        <a class="link" href="index.html">Главная</a>
+                        <a class="link" href="dish_page.html">Собрать заказ</a>
+                        <a class = "link" href="make_order.html">Оформить</a>
+                        <a class = "link" href="orders.html"  id = "active">Заказы</a>
+                        <a class="link" href="#about_us"> О нас </a>
+                        <a class="link" href="#contact"> Контакты </a>
+                    </h2>
+                </nav>
+            </div>
+            </header>
+            <main>
+                <section>
+                    <h2>История заказов</h2>
+                    <table id="orders">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Дата оформления</th>
+                                <th>Состав заказа</th>
+                                <th>Стоимость</th>
+                                <th>Время доставки</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </section>
+                <section>
+                    <div class="modal" id="readModal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Просмотр заказа</h2>
+                                <button class="close">&times;</button>
+                            </div>
+                            <div class="modal-body"></div>
+                            <div class="modal-buttons">
+                                <button class="cancel">Ок</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="editModal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Редактирование заказа</h2>
+                                <button class="close">&times;</button>
+                            </div>
+                            <div class="modal-body"></div>
+                            <div class="modal-buttons">
+                                <button class="cancel">Отмена</button>
+                                <button id="saveButton">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="deleteModal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Удаление заказа</h2>
+                                <button class="close">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Вы уверены, что хотите удалить заказ?</p>
+                            </div>
+                            <div class="modal-buttons">
+                                <button class="cancel">Отмена</button>
+                                <button id="deleteButton">Да</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <article>
+                    <h2>!Обратная связь!</h2>
+                        <footer class="contacts"> 
+                            <p> Позвонить нам: <a class = "link" href = "tel:+79239722325" > 
+                                +7-923-972-23-25 </a> <br>
+                                Егорова Ксения <br>
+                                Почта: <a class = "link" href="mailto:kseniacatrin@gmail.com"> kseniacatrin@gmail.com</a> 
+                            </p>
+                        </footer>
+                </article>
+            </main>
+        </div>
+    </body>
+</html>

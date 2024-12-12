@@ -299,19 +299,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     let delivery_type;
                     if (document.querySelectorAll('input[name="time-type"]:checked')[0].value === 'asap') {
                         delivery_type = 'now';
-                    } else {
-                        delivery_type = 'by_time';
                     }
 
                     const formData = new FormData();
-                    formData.append('full_name', document.getElementById('name').value);
+                    formData.append('full_name', document.getElementById('full_name').value);
                     formData.append('email', document.getElementById('email').value);
                     formData.append('subscribe', document.getElementById('subscribe').value);
                     formData.append('phone', document.getElementById('phone').value);
                     formData.append('delivery_address', document.getElementById('address').value);
                     formData.append('delivery_type', delivery_type);
                     formData.append('delivery_time', document.getElementById('delivery-time').value);
-                    formData.append('comment', document.getElementById('comments').value);
+                    formData.append('comment', document.getElementById('comment').value);
                     formData.append('soup_id', window.localStorage.getItem('selected_soup'));
                     formData.append('main_course_id', window.localStorage.getItem('selected_main-course'));
                     formData.append('salad_id', window.localStorage.getItem('selected_salad'));
@@ -319,6 +317,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     formData.append('dessert_id', window.localStorage.getItem('selected_dessert'));
 
                     console.log(formData);
+                    for (let pair of formData.entries()) {
+                        console.log(pair[0]+ ', ' + pair[1] + ', ' + typeof pair[1]);
+                    }
                     fetch('https://edu.std-900.ist.mospolytech.ru/labs/api/orders?api_key=53c010a5-dd23-448e-ba0f-9df5fee7e3e3', {
                         method: 'POST',
                         body: formData
