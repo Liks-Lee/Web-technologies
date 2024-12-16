@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лендинг компании</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <!-- Подключение Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        body { 
+            font-family: 'Nerko One', cursive; 
+            font-size: medium;
+        } 
+        h1, h2, h3 { 
+            font-family: 'Nerko One', cursive; 
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 20px;
+
+        }
+
+        /* Hero section */
+        .hero {
+            background-size: cover;
+            background-position: center;
+            color: rgb(221, 80, 80);
+        }
+
+        /* CTA блок */
+        .cta {
+            background-color: #d66543;
+        }
+
+        /* Фон блока с формой */
+        .contact {
+            background-color: #f8f9fa;
+        }
+
+        /* Устанавливаем чёрный цвет текста для всех секций с белым фоном */
+        .hero, .cta, .features, .contact {
+            color: rgb(0, 0, 0);
+        }
+
+        /* Стили для блока с преимуществами */
+        .features h3 {
+            margin-top: 10px;
+        }
+
+        /* Установка высоты изображения в hero секции */
+        .hero img {
+            max-height: 500px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+        .hero {
+            background-color: #FFDAB9; /* Персиковый цвет */
+        }
+        .container { 
+            width: 80%; /* Ширина контейнера (например, 80% от ширины экрана) */
+            max-width: 1200px; /* Максимальная ширина для больших экранов */
+            margin: 0 auto; /* Центрирование по горизонтали */
+            padding: 20px; /* Внутренние отступы для удобства */
+            box-sizing: border-box; /* Включаем padding в общую ширину */
+        }
+        .cta-skyblue {
+            background-color: #87CEEB; /* Небесно-голубой цвет */
+        }
+        .no-wrap {
+            white-space: nowrap; /* Запрещаем перенос текста */
+        }
+        h4 {
+            font-weight: bold;  /* Жирный */  
+            font-size: 18px;
+        }
+    </style>
+        <!-- Подключение Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class ="container">
+
+    <!-- Hero section -->
+    <section class="hero text-dark py-5">
+        <div class="container text-center">
+            <h1 class="display-4">~✰Food Construct✰~</h1>
+            <p class="lead">Доставим еду быстро и вкусно!</p>
+            <img src="iStock-545286388.jpg" alt="Компания" class="img-fluid rounded">
+        </div>
+    </section>
+
+    <!-- Преимущества компании -->
+    <section class="features py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3>Качество</h3>
+                    <p>Используем только свежие продукты, привезённые прямо из Азии!</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Скорость доставки</h3>
+                    <p>Доставка за 60 минут к вашей двери!</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Уникальность</h3>
+                    <p>Попробуйте что-то новое для себя и окунитесь в атмосферу Азии!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA (Призыв к действию) -->
+    <section class="cta cta-skyblue text-dark text-center py-5">
+        <div class="container">
+            <h2 class="display-4">Готовы собрать заказ?</h2>
+            <p class="lead">Соберите идеальный заказ прямо сейчас, выбрав все, что вам нужно!</p>
+            <a href="make_order.html" class="btn btn-light btn-lg">Перейти к сбору</a>
+        </div>
+    </section>
+
+    <!-- Контакты и форма обратной связи -->
+    <section class="contact py-5">
+        <div class="container">
+            <h2 class="text-center">Связаться с нами:</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="mailto:kseniacatrin@gmail.com" method="POST" enctype="text/plain">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                        <h3>Контакты</h3>
+                        <p> Телефон: +7 (923) 972-23-25 </p>
+                        <p> Email: kseniacatrin@gmail.com</p> 
+                        <p class = "no-wrap"> Адрес: г. Москва, ул. Малая, 10</p>
+                        <h4 class = "no-wrap"> Будем рады видеть вас в качестве клиента!!!</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
