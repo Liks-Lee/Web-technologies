@@ -11,6 +11,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Общие стили */
+        .contacts{
+            text-align: center; /*Отцентровка*/
+            background-color: rgb(232, 201, 145);
+            padding-left: 15px /* Увеличенные внутренние отступы */ 
+            link="white" 
+            alink="red"
+        }
+        .link{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 20px;
+            font-family: "Nerko One", cursive;
+        }
+
+        .link:hover {
+            color: rgb(154, 66, 158);
+            text-decoration: underline;
+        }
         body { 
             font-family: 'Nerko One', cursive; 
             font-size: medium;
@@ -52,6 +70,13 @@
             margin-top: 10px;
         }
 
+        header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
         /* Установка высоты изображения в hero секции */
         .hero img {
             max-height: 500px;
@@ -85,11 +110,17 @@
 </head>
 <body>
 <div class ="container">
+    <div class = "contacts">
+        <header class="bg-orange text-black text-center py-3">
+            <h2>~✰Yammi Food✰~</h2>
+            <h2><a id="active" class = "link" href="#contact"> Контакты</a></h2>
+        </header>
+    </div>
 
     <!-- Hero section -->
     <section class="hero text-dark py-5">
         <div class="container text-center">
-            <h1 class="display-4">~✰Food Construct✰~</h1>
+            <h1 class="display-4">Food Construct</h1> <!-- указывает  на  самый  крупный  размер  заголовка  в  Bootstrap -->
             <p class="lead">Доставим еду быстро и вкусно!</p>
             <img src="iStock-545286388.jpg" alt="Компания" class="img-fluid rounded">
         </div>
@@ -99,11 +130,11 @@
     <section class="features py-5">
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-4">
+                <div class="col-md-4"> <!-- mb -отступ нижий, а этот ширину колонки делит на 12 частей и берёт 4 -->
                     <h3>Качество</h3>
                     <p>Используем только свежие продукты, привезённые прямо из Азии!</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4"> <!-- xs (576<), sm(>=576), md(>=768), lg(>=992), xl(>=1200), xxl(>=1400) в Bootstrap -->
                     <h3>Скорость доставки</h3>
                     <p>Доставка за 60 минут к вашей двери!</p>
                 </div>
@@ -156,6 +187,16 @@
             </div>
         </div>
     </section>
+    <article>
+        <h2>!Обратная связь!</h2>
+        <footer id = "contact" class="contacts"> 
+            <p> Позвонить нам: <a class = "link" href = "tel:+79239722325" > 
+                +7-923-972-23-25 </a> <br>
+                Егорова Ксения <br>
+                Почта: <a class = "link" href="mailto:kseniacatrin@gmail.com"> kseniacatrin@gmail.com</a> 
+            </p>
+        </footer>
+    </article>
 </div>
 </body>
 </html>
